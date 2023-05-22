@@ -1,7 +1,6 @@
 name: docker-ci
 
 on:
-  #pull_request:
   push:
 
 jobs:
