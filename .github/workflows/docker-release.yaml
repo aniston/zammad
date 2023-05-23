@@ -51,11 +51,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: |
-      #      ghcr.io/${{ github.repository_owner }}/zammad
+          images:
+          # ghcr.io/${{ github.repository_owner }}/zammad
             index.docker.io/${{ github.repository_owner }}/zammad
             index.docker.io/${{ github.repository_owner }}/zammad-docker-compose
-      #      quay.io/${{ github.repository_owner }}/zammad
+          # quay.io/${{ github.repository_owner }}/zammad
           tags: |
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'stable') }}
             type=raw,value=${{ env.ZAMMAD_VERSION }},enable=${{ github.ref == format('refs/heads/{0}', 'stable') }}
