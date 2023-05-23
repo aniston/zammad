@@ -3,7 +3,6 @@ name: docker-release
 on:
   push:
     branches:
-      - stable
       - develop
     tags:
       - '*'
@@ -18,8 +17,8 @@ jobs:
             fetch-depth: 0
 
       # only needed for arm64 builds
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+      # - name: Set up QEMU
+      #   uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
